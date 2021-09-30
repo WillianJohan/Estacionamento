@@ -35,15 +35,22 @@ namespace Estacionamento
             this.ModeloVeiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddVeicle = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBoxPlaca = new System.Windows.Forms.TextBox();
+            this.textBoxModelo = new System.Windows.Forms.TextBox();
+            this.textBoxCor = new System.Windows.Forms.TextBox();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSaida
             // 
-            this.btnSaida.Location = new System.Drawing.Point(572, 590);
+            this.btnSaida.Location = new System.Drawing.Point(571, 86);
             this.btnSaida.Name = "btnSaida";
-            this.btnSaida.Size = new System.Drawing.Size(125, 39);
+            this.btnSaida.Size = new System.Drawing.Size(126, 39);
             this.btnSaida.TabIndex = 0;
             this.btnSaida.Text = "Saída";
             this.btnSaida.UseVisualStyleBackColor = true;
@@ -59,7 +66,7 @@ namespace Estacionamento
             this.ModeloVeiculo,
             this.Cor,
             this.HoraEntrada});
-            this.dataGrid.Location = new System.Drawing.Point(12, 385);
+            this.dataGrid.Location = new System.Drawing.Point(22, 57);
             this.dataGrid.MultiSelect = false;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowTemplate.Height = 25;
@@ -94,22 +101,86 @@ namespace Estacionamento
             this.HoraEntrada.ReadOnly = true;
             this.HoraEntrada.Width = 150;
             // 
-            // btnAddVeicle
+            // btnAdd
             // 
-            this.btnAddVeicle.Location = new System.Drawing.Point(253, 141);
-            this.btnAddVeicle.Name = "btnAddVeicle";
-            this.btnAddVeicle.Size = new System.Drawing.Size(202, 66);
-            this.btnAddVeicle.TabIndex = 2;
-            this.btnAddVeicle.Text = "Adicionar Veículo";
-            this.btnAddVeicle.UseVisualStyleBackColor = true;
-            this.btnAddVeicle.Click += new System.EventHandler(this.btnAddVeicle_Click);
+            this.btnAdd.Location = new System.Drawing.Point(418, 28);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(279, 23);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "Adicionar Veículo";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAddVeicle_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Placa";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(163, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Modelo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(324, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 15);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Cor";
+            // 
+            // txtBoxPlaca
+            // 
+            this.txtBoxPlaca.Location = new System.Drawing.Point(53, 28);
+            this.txtBoxPlaca.Name = "txtBoxPlaca";
+            this.txtBoxPlaca.Size = new System.Drawing.Size(104, 23);
+            this.txtBoxPlaca.TabIndex = 7;
+            // 
+            // textBoxModelo
+            // 
+            this.textBoxModelo.Location = new System.Drawing.Point(217, 28);
+            this.textBoxModelo.Name = "textBoxModelo";
+            this.textBoxModelo.Size = new System.Drawing.Size(79, 23);
+            this.textBoxModelo.TabIndex = 8;
+            // 
+            // textBoxCor
+            // 
+            this.textBoxCor.Location = new System.Drawing.Point(356, 28);
+            this.textBoxCor.Name = "textBoxCor";
+            this.textBoxCor.Size = new System.Drawing.Size(43, 23);
+            this.textBoxCor.TabIndex = 9;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(571, 57);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(126, 23);
+            this.btnModificar.TabIndex = 10;
+            this.btnModificar.Text = "Alterar Informações";
+            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 645);
-            this.Controls.Add(this.btnAddVeicle);
+            this.ClientSize = new System.Drawing.Size(705, 319);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.textBoxCor);
+            this.Controls.Add(this.textBoxModelo);
+            this.Controls.Add(this.txtBoxPlaca);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.btnSaida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -117,6 +188,7 @@ namespace Estacionamento
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -128,7 +200,14 @@ namespace Estacionamento
         private System.Windows.Forms.DataGridViewTextBoxColumn ModeloVeiculo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cor;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraEntrada;
-        private System.Windows.Forms.Button btnAddVeicle;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtBoxPlaca;
+        private System.Windows.Forms.TextBox textBoxModelo;
+        private System.Windows.Forms.TextBox textBoxCor;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
 
