@@ -62,10 +62,8 @@ namespace Estacionamento
             txtBoxCor.Clear();
         }
 
-        void DeselectDataGridRows()
-        {
+        void ClearDataGridSelection() => dataGrid.ClearSelection();
 
-        }
 
         #endregion
 
