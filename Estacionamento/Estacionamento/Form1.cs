@@ -17,6 +17,8 @@ namespace Estacionamento
             InitializeComponent();
         }
 
+        #region Interface Actions
+
         private void btnSaida_Click(object sender, EventArgs e)
         {
             //Garante que tenha algum veículo selecionado na lista
@@ -32,16 +34,40 @@ namespace Estacionamento
             //Codigo fonte que usei para estudar a dataGrid
             //http://www.macoratti.net/08/08/c_pdgv1.htm
 
-            //define um array de strings com nCOlunas
+            //Pega o texto d
+            string placa    = txtBoxPlaca.Text.Trim();
+            string modelo   = txtBoxModelo.Text.Trim();
+            string cor      = txtBoxCor.Text.Trim();
 
+            //Separa as informações em array
             string[] linhaDados = new string[4];
-            linhaDados[0] = "Colum 1";
-            linhaDados[1] = "Colum 2";
-            linhaDados[2] = "Colum 3";
-            linhaDados[3] = "Colum 4";
+            linhaDados[0] = placa;
+            linhaDados[1] = modelo;
+            linhaDados[2] = cor;
+            linhaDados[3] = "Not Implemented Yet";
 
-            //dataGrid.Rows.Add(new DataGridViewRow());
+            //Adiciona as informações ao dataGrid
             dataGrid.Rows.Add(linhaDados);
+            ClearTextBoxes();
         }
+
+        #endregion
+
+        #region Methods
+
+        void ClearTextBoxes()
+        {
+            txtBoxPlaca.Clear();
+            txtBoxModelo.Clear();
+            txtBoxCor.Clear();
+        }
+
+        void DeselectDataGridRows()
+        {
+
+        }
+
+        #endregion
+
     }
 }
