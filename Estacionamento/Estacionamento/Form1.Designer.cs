@@ -40,8 +40,8 @@ namespace Estacionamento
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtBoxPlaca = new System.Windows.Forms.TextBox();
-            this.textBoxModelo = new System.Windows.Forms.TextBox();
-            this.textBoxCor = new System.Windows.Forms.TextBox();
+            this.txtBoxModelo = new System.Windows.Forms.TextBox();
+            this.txtBoxCor = new System.Windows.Forms.TextBox();
             this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
@@ -145,19 +145,19 @@ namespace Estacionamento
             this.txtBoxPlaca.Size = new System.Drawing.Size(104, 23);
             this.txtBoxPlaca.TabIndex = 7;
             // 
-            // textBoxModelo
+            // txtBoxModelo
             // 
-            this.textBoxModelo.Location = new System.Drawing.Point(217, 28);
-            this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(79, 23);
-            this.textBoxModelo.TabIndex = 8;
+            this.txtBoxModelo.Location = new System.Drawing.Point(217, 28);
+            this.txtBoxModelo.Name = "txtBoxModelo";
+            this.txtBoxModelo.Size = new System.Drawing.Size(79, 23);
+            this.txtBoxModelo.TabIndex = 8;
             // 
-            // textBoxCor
+            // txtBoxCor
             // 
-            this.textBoxCor.Location = new System.Drawing.Point(356, 28);
-            this.textBoxCor.Name = "textBoxCor";
-            this.textBoxCor.Size = new System.Drawing.Size(43, 23);
-            this.textBoxCor.TabIndex = 9;
+            this.txtBoxCor.Location = new System.Drawing.Point(356, 28);
+            this.txtBoxCor.Name = "txtBoxCor";
+            this.txtBoxCor.Size = new System.Drawing.Size(43, 23);
+            this.txtBoxCor.TabIndex = 9;
             // 
             // btnModificar
             // 
@@ -174,8 +174,8 @@ namespace Estacionamento
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 319);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.textBoxCor);
-            this.Controls.Add(this.textBoxModelo);
+            this.Controls.Add(this.txtBoxCor);
+            this.Controls.Add(this.txtBoxModelo);
             this.Controls.Add(this.txtBoxPlaca);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -205,9 +205,10 @@ namespace Estacionamento
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtBoxPlaca;
-        private System.Windows.Forms.TextBox textBoxModelo;
+        private System.Windows.Forms.TextBox txtBoxModelo;
         private System.Windows.Forms.TextBox textBoxCor;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.TextBox txtBoxCor;
     }
 }
 
