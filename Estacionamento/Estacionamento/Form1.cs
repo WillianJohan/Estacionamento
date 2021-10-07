@@ -33,11 +33,14 @@ namespace Estacionamento
 
         #region Interface Actions
 
+        //BUG!!! => Filtrar a remoção pelas informações da placa.
         private void btnSaida_Click(object sender, EventArgs e)
         {
             //Garante que tenha algum veículo selecionado na lista
             if (dataGrid.SelectedRows.Count == 0)
                 return;
+
+            //TODO: Filtrar a remoção pelas informações da placa.
 
             int rowIndex = dataGrid.CurrentCell.RowIndex;
             //dataGrid.Rows.RemoveAt(rowIndex);
