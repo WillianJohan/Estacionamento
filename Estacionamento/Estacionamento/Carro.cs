@@ -8,9 +8,9 @@ namespace Estacionamento
 {
     public struct Carro
     {
-        public string Placa { get; private set; }
-        public string Modelo { get; private set; }
-        public string Cor { get; private set; }
+        public string Placa;
+        public string Modelo;
+        public string Cor;
 
         public Carro(string placa, string modelo, string cor)
         {
@@ -18,7 +18,6 @@ namespace Estacionamento
             Modelo = modelo;
             Cor = cor;
         }
-
 
     }
 }
