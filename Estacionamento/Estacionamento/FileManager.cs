@@ -4,30 +4,46 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Estacionamento
 {
-    public class FileManager : IFileManager
+    public class FileManager
     {
-        void IFileManager.CreateFile(string path) => File.Create(path);
+        string Path;
 
-        public string LoadFile(string path)
+        public FileManager() => Path = @"c:\Estacionamento\Parking.json";
+        public FileManager(string Path) => this.Path = Path;
+
+
+
+
+        void CreateFile() => File.Create(Path);
+
+        public Parking LoadFile()
         {
-            throw new NotImplementedException();
+            //If Empty
+            if (!File.Exists(Path))
+                return new Parking();
+            try
+            {
+                string jsonText = File.ReadAllText(Path);
+                return JsonSerializer.Deserialize<Parking>(jsonText);
+            }
+            catch
+            {
+                return new Parking();
+            }
         }
 
-        public void AddCar(string path, Carro carro)
+        public void Save(Parking parking)
         {
-            Stream output = File.Open(path, FileMode.Append);
-            //StreamWriter writer = new StreamWriter(output);
-            //foreach (int item in unsorted) writer.WriteLine(item);
-            //writer.Close();
-            output.Close();
-        }
+            //if (!File.Exists(Path))
+            //    CreateFile();
 
-        public void RemoveCar(string path, Carro carro)
-        {
-            throw new NotImplementedException();
+            string jsonString = JsonSerializer.Serialize(parking);
+            File.WriteAllText(Path, jsonString);
         }
         
     }
