@@ -8,7 +8,10 @@ namespace Estacionamento_WPF.Model
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; private set; }
-        [NotNull, MaxLength(8)] public string LicensePlate { get; set; }
+        
+        [NotNull, MaxLength(8)] 
+        public string LicensePlate { get; set; }
+        
         public string Model { get; set; }
         public string Color { get; set; }
     }
