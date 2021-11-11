@@ -6,8 +6,38 @@
         xmlns:local="clr-namespace:Estacionamento_WPF"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="600" Width="800">
+        MinWidth="1270" MinHeight="720"
+        Title="MainWindow" Width="1270" Height="720">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1000"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        
+        <!--Title-->
+        <TextBlock Text="Estacionamento" FontSize="25" FontWeight="DemiBold"
+                   Grid.Row="0" Grid.Column="1" />
+        <!--Lista de carros no estacionamento-->
+        <DataGrid Grid.Row="2" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Horatio de Entrada"/>
+                <DataGridTextColumn Header="Placa do Carro"/>
+                <DataGridTextColumn Header="Modelo"/>
+            </DataGrid.Columns>
+        </DataGrid>
         
     </Grid>
 </Window>
