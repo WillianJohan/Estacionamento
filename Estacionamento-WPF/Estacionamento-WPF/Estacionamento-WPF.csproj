@@ -97,6 +97,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Database\ParkingOperations.cs" />
+    <Compile Include="Database\SQLiteBaseOperations.cs" />
+    <Compile Include="Database\SQLiteConfiguration.cs" />
     <Compile Include="Model\ParkingRecord.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\LoginWindow.xaml.cs">

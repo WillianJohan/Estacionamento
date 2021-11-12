@@ -14,7 +14,21 @@ namespace Estacionamento_WPF.Model
 
         public string Model { get; set; }
 
+        [NotNull]
         public DateTime EntryTime { get; set; }
         public DateTime DepartureTime { get; set; }
+
+
+        #region DatabaseMethods
+
+        public bool CanSaveInDatabase()
+        {
+            bool canSave = !string.IsNullOrEmpty(Plate) && EntryTime != null;
+            return canSave;
+        }
+
+        #endregion
+
     }
+
 }
