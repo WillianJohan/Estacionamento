@@ -101,6 +101,8 @@
     <Compile Include="Database\SQLiteBaseOperations.cs" />
     <Compile Include="Database\SQLiteConfiguration.cs" />
     <Compile Include="Model\ParkingRecord.cs" />
+    <Compile Include="ViewModel\LoginVM.cs" />
+    <Compile Include="ViewModel\MainWindowVM.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>

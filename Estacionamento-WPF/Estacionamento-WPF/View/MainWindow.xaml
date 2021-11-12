@@ -4,11 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Estacionamento_WPF"
+        xmlns:viewModel="clr-namespace:Estacionamento_WPF.ViewModel"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         MinWidth="1270" MinHeight="720"
         Title="MainWindow" Width="1270" Height="720">
-    <Grid>
+    <Window.Resources>
+        <viewModel:MainWindowVM x:Key="viewModel"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource viewModel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="1000"/>

@@ -4,10 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Estacionamento_WPF.View"
+        xmlns:viewModel="clr-namespace:Estacionamento_WPF.ViewModel"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="LoginWindow" Height="200" Width="450">
-    <Grid Background="LightGray">
+    <Window.Resources>
+        <viewModel:LoginVM x:Key="loginVM"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource loginVM}" Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25"/>
             <ColumnDefinition Width="auto"/>
