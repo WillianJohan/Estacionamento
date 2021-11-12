@@ -15,9 +15,10 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="200"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Column="1" Grid.Row="1">
@@ -31,12 +32,40 @@
         <TextBlock Text="Estacionamento" FontSize="25" FontWeight="DemiBold"
                    Grid.Row="0" Grid.Column="1" />
         <!--Lista de carros no estacionamento-->
-        <DataGrid Grid.Row="2" Grid.Column="1">
+        <DataGrid Grid.Row="2" Grid.Column="1"
+                  CanUserResizeColumns="False" CanUserReorderColumns="False"
+                  CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Horatio de Entrada"/>
-                <DataGridTextColumn Header="Placa do Carro"/>
-                <DataGridTextColumn Header="Modelo"/>
+                <DataGridTextColumn Header="ID" Width="50"/>
+                <DataGridTextColumn Header="Horatio de Entrada" Width="120"/>
+                <DataGridTextColumn Header="Placa do Carro" Width="120"/>
+                <DataGridTextColumn Header="Modelo" Width="*"/>
+                
+                <DataGridTemplateColumn Header="Alterar informações">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Alterar" BorderBrush="Transparent" Command=""/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn Header="Adicionar Saída">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Saída" BorderBrush="Transparent" Command=""/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn Header="Deletar registro">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Remover" Background="OrangeRed" BorderBrush="Transparent" Command=""/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
+            
         </DataGrid>
         
     </Grid>
