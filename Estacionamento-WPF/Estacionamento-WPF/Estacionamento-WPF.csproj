@@ -85,6 +85,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\Commands\OpenNewCarWindowCommand.cs" />
+    <Compile Include="ViewModel\Commands\OpenUpdateParkingRecordWindowCommand.cs" />
+    <Compile Include="ViewModel\Commands\RemoveParkingRecordItemCommand.cs" />
+    <Compile Include="View\UpdateParkingRecordWindow.xaml.cs">
+      <DependentUpon>UpdateParkingRecordWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\AddNewCarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -101,9 +111,13 @@
     <Compile Include="Database\SQLiteBaseOperations.cs" />
     <Compile Include="Database\SQLiteConfiguration.cs" />
     <Compile Include="Model\ParkingRecord.cs" />
+    <Compile Include="ViewModel\Commands\CommandBase.cs" />
     <Compile Include="ViewModel\LoginVM.cs" />
     <Compile Include="ViewModel\MainWindowVM.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\AddNewCarWindow.xaml.cs">
+      <DependentUpon>AddNewCarWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -111,6 +125,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\UpdateParkingRecordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -139,7 +157,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Icons\option1.png" />
+    <Resource Include="Icons\option2.png" />
+    <Resource Include="Icons\option3.png" />
+    <Resource Include="Icons\rm1.png" />
+    <Resource Include="Icons\rm2.png" />
+    <Resource Include="Icons\rm3.png" />
+    <Resource Include="Icons\rm4.png" />
+    <Resource Include="Icons\up1.png" />
+    <Resource Include="Icons\up2.png" />
+    <Resource Include="Icons\up3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\ok1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
