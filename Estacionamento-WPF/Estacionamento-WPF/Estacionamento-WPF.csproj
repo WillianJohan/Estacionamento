@@ -85,9 +85,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModel\Commands\OpenNewCarWindowCommand.cs" />
-    <Compile Include="ViewModel\Commands\OpenUpdateParkingRecordWindowCommand.cs" />
-    <Compile Include="ViewModel\Commands\RemoveParkingRecordItemCommand.cs" />
+    <Compile Include="ViewModel\Commands\MainWindowCommands.cs" />
     <Compile Include="View\UpdateParkingRecordWindow.xaml.cs">
       <DependentUpon>UpdateParkingRecordWindow.xaml</DependentUpon>
     </Compile>
