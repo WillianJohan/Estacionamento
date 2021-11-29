@@ -21,9 +21,9 @@ namespace Estacionamento_WPF.Database
 
             //Verifica se os valores obrigatórios são válidos
             if (!pr.CanSaveInDatabase())
-            { 
-                return false;
+            {
                 message = "Item possui valores inválidos ou nulos.";
+                return false;
             }
 
             bool result = SQLiteBaseOperations.Insert<ParkingRecord>(pr);
