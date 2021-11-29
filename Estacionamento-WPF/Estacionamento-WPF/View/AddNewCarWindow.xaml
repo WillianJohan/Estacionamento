@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Title="AddNewCarWindow" Height="200" Width="500">
+        Title="Registrar novo carro" Height="200" Width="500">
     <Grid Margin="10">
 
         <Grid.ColumnDefinitions>

@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         MinWidth="1270" MinHeight="720"
-        Title="MainWindow" Width="1270" Height="720">
+        Title="Estacionamento" Width="1270" Height="720">
     <Window.Resources>
         <viewModel:MainWindowVM x:Key="viewModel"/>
         
