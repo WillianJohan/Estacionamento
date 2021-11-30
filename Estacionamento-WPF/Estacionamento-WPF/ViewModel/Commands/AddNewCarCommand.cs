@@ -12,10 +12,13 @@ namespace Estacionamento_WPF.ViewModel.Commands
         AddNewCarVM vm;
 
         public AddNewCarCommand(AddNewCarVM vm)
-            => this.vm = vm;
+        {
+            this.vm = vm;
+            this.vm.PropertyChanged += OnCanExecuteChanged;
+        }
 
         public override bool CanExecute(object parameter)
-            => string.IsNullOrEmpty(vm.Plate);
+            => !string.IsNullOrEmpty(vm.Plate);
 
         public override void Execute(object parameter)
             => vm.Save();

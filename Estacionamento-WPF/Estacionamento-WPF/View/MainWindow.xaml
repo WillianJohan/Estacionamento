@@ -43,6 +43,10 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+
+            <Button Content="NewCar" Command="{Binding openNewCarWindowCommand}" Grid.Row="0"/>
+            <Button Content="Update" Command="{Binding openUpdateParkingRecordWindowCommand}" Grid.Row="1"/>
+
         </Grid>
 
         <!--Title-->

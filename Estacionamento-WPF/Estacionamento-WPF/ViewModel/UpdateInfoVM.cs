@@ -38,10 +38,11 @@ namespace Estacionamento_WPF.ViewModel
         public UpdateInfoVM()
         {
             UpdateCommand = new Commands.UpdateInfoCommand(this);
-            if(!ItemToUpdate.CanSaveInDatabase())
+            if(ItemToUpdate == null || !ItemToUpdate.CanSaveInDatabase())
             {
                 MessageBox.Show("Houve algum problema ao carregar as informações!");
-                View.UpdateParkingRecordWindow.Instance.Close();
+                return;
+                View.UpdateParkingRecordWindow.Instance.Close(); //Problema
             }
 
             Model = ItemToUpdate.Model;
