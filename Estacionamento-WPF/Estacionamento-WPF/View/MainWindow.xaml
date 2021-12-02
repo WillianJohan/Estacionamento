@@ -11,19 +11,6 @@
         Title="Estacionamento" Width="1270" Height="720">
     <Window.Resources>
         <viewModel:MainWindowVM x:Key="viewModel"/>
-        
-        <!--Style-->
-        <Style x:Key="centeCellStyle" TargetType="DataGridCell">
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="FontWeight" Value="DemiBold"/>
-            <Setter Property="Foreground" Value="#373737"/>
-        </Style>
-        <Style x:Key="normalCellStyle" TargetType="DataGridCell">
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="FontWeight" Value="DemiBold"/>
-            <Setter Property="Foreground" Value="#373737"/>
-        </Style>
     </Window.Resources>
     <Grid DataContext="{StaticResource viewModel}">
         <Grid.ColumnDefinitions>
@@ -58,27 +45,24 @@
 
         
         <!--Lista de carros no estacionamento-->
+
+        <!--Lista de carros no estacionamento-->
         <DataGrid Grid.Row="2" Grid.Column="1"
                   CanUserResizeColumns="False" CanUserReorderColumns="False"
                   CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False"
                   SelectionUnit="FullRow" IsReadOnly="True" SelectionMode="Single"
                   AlternatingRowBackground="#8DC9FF" RowBackground="#80C3FF"
                   VerticalGridLinesBrush="Transparent"
-                  ItemsSource="{Binding ParkingRecordList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                  SelectedItem="{Binding SelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  ItemsSource="{Binding ParkingRecordList, UpdateSourceTrigger=PropertyChanged}"
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                   AutoGenerateColumns="false">
-            <Style TargetType="DataGridCell">
-                <Style.Setters>
-                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
-                </Style.Setters>
-            </Style>
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Width="50" Binding="{Binding ID}" FontSize="14" CellStyle="{StaticResource centeCellStyle}"/>
-                <DataGridTextColumn Header="Horário de Entrada" Width="120" Binding="{Binding EntryTime, StringFormat='{}{0:yy.MM.dd HH:mm}'}" CellStyle="{StaticResource centeCellStyle}"/>
-                <DataGridTextColumn Header="Placa do Carro" Width="120" Binding="{Binding Plate}" CellStyle="{StaticResource centeCellStyle}" />
-                <DataGridTextColumn Header="Modelo" Width="*" Binding="{Binding Model}" CellStyle="{StaticResource normalCellStyle}" />
-                
+                <DataGridTextColumn Header="ID" Width="50" Binding="{Binding ID}" FontSize="14"/>
+                <DataGridTextColumn Header="Horário de Entrada" Width="120" Binding="{Binding EntryTime, StringFormat='{}{0:yy.MM.dd HH:mm}'}"/>
+                <DataGridTextColumn Header="Placa do Carro" Width="120" Binding="{Binding Plate}"/>
+                <DataGridTextColumn Header="Modelo" Width="*" Binding="{Binding Model}"/>
+
                 <DataGridTemplateColumn Header="Alerar" Width="45">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -88,7 +72,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                
+
                 <DataGridTemplateColumn Header="Saída" Width="45">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -98,7 +82,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                
+
                 <DataGridTemplateColumn Header="Deletar registro">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -110,6 +94,6 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        
+
     </Grid>
 </Window>

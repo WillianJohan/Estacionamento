@@ -27,8 +27,8 @@ namespace Estacionamento_WPF.ViewModel
             }
         }
 
-        ObservableCollection<ParkingRecord> parkingRecordList;
-        public ObservableCollection<ParkingRecord> ParkingRecordList 
+        List<ParkingRecord> parkingRecordList;
+        public List<ParkingRecord> ParkingRecordList 
         { 
             get => parkingRecordList;
             set
@@ -42,10 +42,11 @@ namespace Estacionamento_WPF.ViewModel
 
         public MainWindowVM()
         {
-            parkingRecordList = new ObservableCollection<ParkingRecord>();
             openUpdateParkingRecordWindowCommand = new OpenUpdateParkingRecordWindowCommand(this);
             openNewCarWindowCommand = new OpenNewCarWindowCommand(this);
             removeParkingRecordItemCommand = new RemoveParkingRecordItemCommand(this);
+            
+            //parkingRecordList = new ObservableCollection<ParkingRecord>();
             UpdateParkingRecordList();
         }
 
@@ -79,9 +80,10 @@ namespace Estacionamento_WPF.ViewModel
         //Lê do banco de dados e atualiza a lista de carros do estacionamento
         public void UpdateParkingRecordList()
         {
-            ParkingRecordList.Clear();
-            foreach (ParkingRecord item in Database.ParkingOperations.Read())
-                ParkingRecordList.Add(item);
+            //ParkingRecordList.Clear();
+            ParkingRecordList = Database.ParkingOperations.Read();
+            //foreach (ParkingRecord item in records)
+                //ParkingRecordList.Add(item);
         }
     }
 }

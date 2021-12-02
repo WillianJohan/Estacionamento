@@ -1,4 +1,6 @@
 ﻿using Estacionamento_WPF.Model;
+using Estacionamento_WPF.View;
+using Estacionamento_WPF.ViewModel.Commands;
 using System.Windows;
 
 namespace Estacionamento_WPF.ViewModel
@@ -7,7 +9,7 @@ namespace Estacionamento_WPF.ViewModel
     {
         public static ParkingRecord ItemToUpdate {get;set;}
 
-        public Commands.UpdateInfoCommand UpdateCommand { get; private set; }
+        public UpdateInfoCommand UpdateCommand { get; private set; }
 
         #region Propertyes
 
@@ -37,16 +39,14 @@ namespace Estacionamento_WPF.ViewModel
 
         public UpdateInfoVM()
         {
-            UpdateCommand = new Commands.UpdateInfoCommand(this);
-            if(ItemToUpdate == null || !ItemToUpdate.CanSaveInDatabase())
-            {
+            UpdateCommand = new UpdateInfoCommand(this);
+            if (ItemToUpdate == null || !ItemToUpdate.CanSaveInDatabase())
                 MessageBox.Show("Houve algum problema ao carregar as informações!");
-                return;
-                View.UpdateParkingRecordWindow.Instance.Close(); //Problema
+            else
+            {
+                Model = ItemToUpdate.Model;
+                Plate = ItemToUpdate.Plate;
             }
-
-            Model = ItemToUpdate.Model;
-            Plate = ItemToUpdate.Plate;
         }
 
         public void Save()
@@ -60,7 +60,7 @@ namespace Estacionamento_WPF.ViewModel
 
 
             if (operationSucess) //Se for ok, fecha a janela
-                View.UpdateParkingRecordWindow.Instance.Close();
+                UpdateParkingRecordWindow.Instance.Close();
             else
                 MessageBox.Show("Não foi possivel salvar! Consulte o administrador do sistema.");
         }

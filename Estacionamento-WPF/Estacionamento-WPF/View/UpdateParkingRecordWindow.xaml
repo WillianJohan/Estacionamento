@@ -27,7 +27,7 @@
 
         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Margin="0,0,0,10">
             <Image Source="E:\7 - GitHub\Estacionamento\Estacionamento-WPF\Estacionamento-WPF\Icons\parked-car.png" Width="45" Height="35"/>
-            <TextBlock Text="Novo Registro" FontSize="16" FontWeight="DemiBold" Foreground="DarkSlateGray"
+            <TextBlock Text="Atualizar um Registro" FontSize="16" FontWeight="DemiBold" Foreground="DarkSlateGray"
                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
 
