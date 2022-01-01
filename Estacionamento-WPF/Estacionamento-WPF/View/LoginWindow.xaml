@@ -27,9 +27,12 @@
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
 
+        <Image Source="../Icons/parked-car.png" 
+               Grid.Column="2" Grid.Row="1" 
+               Width="50" Height="50"/>
         <TextBlock Text="PROJETO ESTACIONAMENTO" FontSize="15" FontWeight="Bold"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Top"
+                   VerticalAlignment="Center"
                    Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1"/>
         <TextBlock Text="Digite sua senha: " Grid.Column="2" Grid.Row="3"/>
         <PasswordBox x:Name="passInput" 

@@ -31,8 +31,8 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Button Content="NewCar" Command="{Binding openNewCarWindowCommand}" Grid.Row="0"/>
-            <Button Content="Update" Command="{Binding openUpdateParkingRecordWindowCommand}" Grid.Row="1"/>
+            <Button Content="NewCar" Margin="30,30,800,30" Command="{Binding openNewCarWindowCommand}" Grid.Row="0"/>
+            <Button Content="Update teste" Margin="30,30,800,30" Command="{Binding openUpdateParkingRecordWindowCommand}" Grid.Row="1"/>
 
         </Grid>
 
