@@ -7,38 +7,73 @@
         xmlns:viewModel="clr-namespace:Estacionamento_WPF.ViewModel"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Login" Height="200" Width="450">
+        Title="Login Estacionamento" Height="450" Width="400">
     <Window.Resources>
         <viewModel:LoginVM x:Key="loginVM"/>
     </Window.Resources>
-    <Grid DataContext="{StaticResource loginVM}" Background="LightGray">
+    <Grid DataContext="{StaticResource loginVM}" Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="25"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Image Source="../Icons/parked-car.png" 
-               Grid.Column="2" Grid.Row="1" 
+        <!-- HEADER !-->
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+            <Image Source="../Images/parked-car.png" 
                Width="50" Height="50"/>
-        <TextBlock Text="PROJETO ESTACIONAMENTO" FontSize="15" FontWeight="Bold"
+            <TextBlock Text="Login" FontSize="30" FontWeight="Bold" Foreground="DarkSlateGray"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <TextBlock Text="Digite sua senha: " Grid.Column="2" Grid.Row="3"/>
-        <PasswordBox x:Name="passInput" 
-                     Grid.Row="3" Grid.Column="3" 
-                     Width="300" Height="18"
-                     HorizontalAlignment="Center" VerticalAlignment="Top"
-                     KeyDown="passInput_KeyDown"/>
+                   VerticalAlignment="Center"/>
+        </StackPanel>
+        
+        
+        <!--Username-->
+        <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,30,0,0">
+            <TextBlock Text="Nome de usuário" FontSize="18"/>
+            <TextBox Width="330" Height="40" 
+                     FontSize="28" VerticalAlignment="Center"
+                     HorizontalAlignment="Left"/>
+        </StackPanel>
+        
+        
+        <!--Password-->
+        <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,15,0,0">
+            <TextBlock Text="Senha" FontSize="18"/>
+            <PasswordBox Width="330" Height="40"
+                         FontSize="28" VerticalAlignment="Center"
+                     HorizontalAlignment="Left"/>
+        </StackPanel>
+        
+        
+        <!--Login and Registration Button-->
+        <StackPanel Grid.Column="1" Grid.Row="4" Margin="0,30,0,0">
+            <Button Width="330" Height="60" Background="LightBlue">
+                <TextBlock Text="Login" FontSize="30" FontWeight="Bold" Foreground="DarkSlateGray"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+            </Button>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Não possui login? " FontSize="12"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                <Button Height="20" Background="Transparent" BorderBrush="Transparent">
+                    <TextBlock Text="registre aqui!" Foreground="Blue" FontSize="12"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Button>
+            </StackPanel>
+            
+        </StackPanel>
+        
     </Grid>
 </Window>
