@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Estacionamento_WPF.View"
         xmlns:viewModel="clr-namespace:Estacionamento_WPF.ViewModel"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Title="Login Estacionamento" Height="450" Width="400">
     <Window.Resources>
