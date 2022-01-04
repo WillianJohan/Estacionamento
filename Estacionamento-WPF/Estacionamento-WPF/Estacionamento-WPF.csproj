@@ -160,23 +160,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icons\option1.png" />
-    <Resource Include="Icons\option2.png" />
-    <Resource Include="Icons\option3.png" />
-    <Resource Include="Icons\rm1.png" />
-    <Resource Include="Icons\rm2.png" />
-    <Resource Include="Icons\rm3.png" />
-    <Resource Include="Icons\rm4.png" />
-    <Resource Include="Icons\up1.png" />
-    <Resource Include="Icons\up2.png" />
-    <Resource Include="Icons\up3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons\ok1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons\done.png" />
-    <Resource Include="Icons\parked-car.png" />
+    <Resource Include="Images\done.png" />
+    <Resource Include="Images\GraySeparator.png" />
+    <Resource Include="Images\ok1.png" />
+    <Resource Include="Images\option1.png" />
+    <Resource Include="Images\option2.png" />
+    <Resource Include="Images\option3.png" />
+    <Resource Include="Images\parked-car.png" />
+    <Resource Include="Images\rm1.png" />
+    <Resource Include="Images\rm2.png" />
+    <Resource Include="Images\rm3.png" />
+    <Resource Include="Images\rm4.png" />
+    <Resource Include="Images\up1.png" />
+    <Resource Include="Images\up2.png" />
+    <Resource Include="Images\up3.png" />
+    <Resource Include="Images\WhiteSeparator.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />
